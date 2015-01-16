@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ardeco - Inspector</title>
+		<script src="jquery.min.js"></script>
+	</head>
+	<body>
+		<button id="btnMain">Go</button>
+		<button id="btnClear">Clear</button>
+		<div id="divResults"></div>
+		<script>
+/*
+			var MainModule = (function(module) {
+				module.Go = function(resultObject) {
+					alert('');
+				 	resultObject.prepend(Date() + '<br />');
+				});
+				return module;
+			}(MainModule || {}));
+*/			
+			
+			$('#btnMain').click(function () {
+				$('#divResults').prepend(Date() + '<br />');
+				//MainModule.Go($('#divResults'));
+			});
+			$('#btnClear').click(function () {
+			  $('#divResults').html('');
+			});
+			
+		</script>
+	</body>
+
+</html>
